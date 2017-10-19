@@ -1,0 +1,11 @@
+---
+-name : Create Directories
+  file:
+    path: "/home/{{ user }}/{{ project }}/{{ item }}"
+    state: directory
+    mode: 0755
+  with_item:
+      - { "conf" }
+      - { "bin" }
+      - { "lib" }
+      - { "log" }
